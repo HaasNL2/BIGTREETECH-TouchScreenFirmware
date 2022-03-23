@@ -124,7 +124,7 @@
  *
  *   Options: [disable: 0, enable: 1]
  */
-#define STATUS_SCREEN 1  // Default: 1
+#define STATUS_SCREEN 0  // Default: 1
 
 /**
  * Touch Mode Colors
@@ -182,7 +182,7 @@
  *
  *   Options: [Date Newest First: 0, Date Oldest First: 1, Name Ascending: 2, Name Descending: 3]
  */
-#define FILES_SORT_BY 0  // Default: 0
+#define FILES_SORT_BY 1  // Default: 0
 
 /**
  * Files List Mode
@@ -232,7 +232,7 @@
  *
  *   Options: [disable: 0, enable: 1]
  */
-#define NOTIFICATION_M117 0  // Default: 0
+#define NOTIFICATION_M117 1  // Default: 0
 
 /**
  * Progress Numeric Display Mode During Print
@@ -311,8 +311,8 @@
  *   Options: [ WHITE: 0,  BLACK: 1,  RED: 2,  GREEN: 3,      BLUE: 4,       CYAN: 5,  MAGENTA: 6,    YELLOW: 7,
  *             ORANGE: 8, PURPLE: 9, LIME: 10, BROWN: 11, DARKBLUE: 12, DARKGREEN: 13,    GRAY: 14, DARKGRAY: 15]
  */
-#define MARLIN_BACKGROUND_COLOR 1  // Marlin Mode background color (Default: 1)
-#define MARLIN_FONT_COLOR       0  // Marlin Mode font color (Default: 0)
+#define MARLIN_BACKGROUND_COLOR 0  // Marlin Mode background color (Default: 1)
+#define MARLIN_FONT_COLOR       1  // Marlin Mode font color (Default: 0)
 
 /**
  * Fullscreen Marlin Mode
@@ -322,14 +322,14 @@
  *
  *   Options: [disable: 0, enable: 1]
  */
-#define MARLIN_FULLSCREEN 0  // Default: 0
+#define MARLIN_FULLSCREEN 1  // Default: 0
 
 /**
  * Show Marlin Mode Title
  * Show banner text at the top of the TFT in Marlin Mode.
  *   Options: [disable: 0, enable: 1]
  */
-#define MARLIN_SHOW_TITLE 1  // Default: 1
+#define MARLIN_SHOW_TITLE 0  // Default: 1
 
 /**
  * Marlin Mode Title
@@ -353,13 +353,13 @@
  * Hotend Count
  *   Value range: [min: 0, max: 6]
  */
-#define HOTEND_COUNT 1  // Default: 1
+#define HOTEND_COUNT 0  // Default: 1
 
 /**
  * Heated Bed Support
  *   Options: [disable: 0, enable: 1]
  */
-#define HEATED_BED 1  // Default: 1
+#define HEATED_BED 0  // Default: 1
 
 /**
  * Heated Chamber Support
@@ -372,7 +372,7 @@
  * Extruder Count
  *   Value range: [min: 0, max: 6]
  */
-#define EXTRUDER_COUNT  1  // Default: 1
+#define EXTRUDER_COUNT  0  // Default: 1
 #define MIXING_EXTRUDER 0  // Default: 0. For mixing_extruder set to 1 (This option turns off autodetection
                            // of the number of extruders)
 
@@ -388,7 +388,7 @@
  * firmware supports controller fan (M710).
  *   Options: [disable: 0, enable: 1]
  */
-#define CONTROLLER_FAN 0  // Default: 0
+#define CONTROLLER_FAN 1  // Default: 0
 
 /**
  * Bed / Extruder / Chamber Maximum Temperatures
@@ -407,7 +407,7 @@
  *   Unit: [temperature in °C]
  *   Value range: [min: 20, max: 1000]
  */
-#define MIN_TEMP 180  // Default: 180
+#define MIN_TEMP 20  // Default: 180
 
 /**
  * Fan Maximum PWM Speed
@@ -432,9 +432,9 @@
 #define X_MIN_POS   0  // Default: 0
 #define Y_MIN_POS   0  // Default: 0
 #define Z_MIN_POS   0  // Default: 0
-#define X_MAX_POS 235  // Default: 235
-#define Y_MAX_POS 235  // Default: 235
-#define Z_MAX_POS 250  // Default: 250
+#define X_MAX_POS 800  // Default: 235
+#define Y_MAX_POS 1270  // Default: 235
+#define Z_MAX_POS 94  // Default: 250
 
 /**
  * X & Y Move Speeds/Feedrates
@@ -443,9 +443,9 @@
  *   Unit: [feedrate in mm/min]
  *   Value range: [min: 10, max: 12000]
  */
-#define SPEED_XY_SLOW   1000  // Default: 1000
-#define SPEED_XY_NORMAL 3000  // Default: 3000
-#define SPEED_XY_FAST   5000  // Default: 5000
+#define SPEED_XY_SLOW   1500  // Default: 1000
+#define SPEED_XY_NORMAL 2000  // Default: 3000
+#define SPEED_XY_FAST   2500  // Default: 5000
 
 /**
  * Z Speeds/Feedrates
@@ -454,9 +454,9 @@
  *   Unit: [feedrate in mm/min]
  *   Value range: [min: 10, max: 12000]
  */
-#define SPEED_Z_SLOW   500   // Default: 500
-#define SPEED_Z_NORMAL 1000  // Default: 1000
-#define SPEED_Z_FAST   2000  // Default: 2000
+#define SPEED_Z_SLOW   50   // Default: 500
+#define SPEED_Z_NORMAL 100  // Default: 1000
+#define SPEED_Z_FAST   240  // Default: 2000
 
 /**
  * Extruder Speeds/Feedrates
@@ -476,7 +476,7 @@
  * to enable leveling state after startup.
  *   Options: [disable: 0, enable: 1]
  */
-#define AUTO_LOAD_LEVELING 1  // Default: 1
+#define AUTO_LOAD_LEVELING 0  // Default: 1
 
 /**
  * Onboard / Printer SD
@@ -514,7 +514,7 @@
  * Auto-detect is not available for other firmwares like Smoothieware.
  *   Options: [disable: 0, enable: 1, auto-detect: 2]
  */
-#define LONG_FILENAME 2  // Default: 2
+#define LONG_FILENAME 1  // Default: 2
 
 /**
  * Pause/Nozzle Park Settings
@@ -551,8 +551,8 @@
 #define NOZZLE_PAUSE_X_POSITION     (X_MIN_POS + 10.0f)  // (mm) (Default: 10.0f)
 #define NOZZLE_PAUSE_Y_POSITION     (Y_MIN_POS + 10.0f)  // (mm) (Default: 10.0f)
 #define NOZZLE_PAUSE_Z_RAISE                      10.0f  // (mm) (Default: 10.0f)
-#define NOZZLE_PAUSE_XY_FEEDRATE                   6000  // (mm/min) X and Y axes feedrate (Default: 6000)
-#define NOZZLE_PAUSE_Z_FEEDRATE                    6000  // (mm/min) Z axis feedrate (Default: 6000)
+#define NOZZLE_PAUSE_XY_FEEDRATE                   2400  // (mm/min) X and Y axes feedrate (Default: 6000)
+#define NOZZLE_PAUSE_Z_FEEDRATE                    150  // (mm/min) Z axis feedrate (Default: 6000)
 #define NOZZLE_PAUSE_E_FEEDRATE                     600  // (mm/min) retract & purge feedrate (Default: 600)
 
 /**
@@ -586,8 +586,8 @@
 #define LEVELING_EDGE_DISTANCE    20  // (mm) Inset distance from bed's edge for calculating leveling point location (Default: 20)
 #define LEVELING_Z_POS          0.2f  // (mm) Z-axis position when nozzle stays for leveling (Default: 0.2f)
 #define LEVELING_Z_RAISE       10.0f  // (mm) Z-axis position when nozzle move to next point (Default: 10.0f)
-#define LEVELING_XY_FEEDRATE    6000  // (mm/min) X and Y axes move feedrate (Default: 6000)
-#define LEVELING_Z_FEEDRATE     6000  // (mm/min) Z axis move feedrate (Default: 6000)
+#define LEVELING_XY_FEEDRATE    2000  // (mm/min) X and Y axes move feedrate (Default: 6000)
+#define LEVELING_Z_FEEDRATE     120  // (mm/min) Z axis move feedrate (Default: 6000)
 
 /**
  * Inverted Axes (Manual Leveling, Move, Probe Offset)
@@ -624,7 +624,7 @@
  *
  *   Options: [disable: 0, enable: 1]
  */
-#define PROBING_Z_OFFSET 1  // Default: 1
+#define PROBING_Z_OFFSET 0  // Default: 1
 
 /**
  * Probing Z Raise (Probe Offset, Mesh Editor)
@@ -684,7 +684,7 @@
  * The power supply uses the opposite of this logic to stay OFF.
  *   Options: [disable: 0, enable: 1]
  */
-#define PS_ACTIVE_HIGH 1  // Default: 1
+#define PS_ACTIVE_HIGH 0  // Default: 1
 
 /**
  * Power Supply Auto Shutdown Mode
@@ -772,7 +772,7 @@
  * Disable to reduce the loss of TFT SD card or TFT USB disk.
  *   Options: [disable: 0, enable: 1]
  */
-#define PL_RECOVERY 1  // Default: 1
+#define PL_RECOVERY 0  // Default: 1
 
 /**
  * Power Loss Recovery Homing
@@ -787,7 +787,7 @@
  *   Unit: [distance in mm]
  *   Value range: [min: 0.0, max: 2000.0]
  */
-#define PL_RECOVERY_Z_RAISE 10.0f  // Default: 10.0f
+#define PL_RECOVERY_Z_RAISE 0.0f  // Default: 10.0f
 
 /**
  * BTT Mini UPS Support
@@ -819,7 +819,7 @@
 #define TOUCH_SOUND  1  // Default: 1
 #define TOAST_SOUND  1  // Default: 1
 #define ALERT_SOUND  1  // Default: 1
-#define HEATER_SOUND 1  // Default: 1
+#define HEATER_SOUND 0  // Default: 1
 
 /**
  * LCD Brightness Levels (only for TFT28/TFT35/TFT43/TFT50/TFT70 V3.0)
@@ -835,10 +835,10 @@
  * period of the LCD idle time.
  *   Options: [OFF: 0, 5sec: 1, 10sec: 2, 30sec: 3, 1min: 4, 2min: 5, 5min: 6, 10min: 7]
  */
-#define LCD_IDLE_TIME 0  // Default: 0
+#define LCD_IDLE_TIME 7  // Default: 0
 
 // Custom value in seconds. This will be used if LCD_IDLE_TIME is set to 7 (CUSTOM Seconds)
-#define IDLE_TIME_CUSTOM (10 * 60)  // Default: 10 * 60
+#define IDLE_TIME_CUSTOM (15 * 60)  // Default: 10 * 60
 
 /**
  * LCD Lock On Idle (only for TFT28/TFT35/TFT43/TFT50/TFT70 V3.0)
@@ -885,7 +885,7 @@
  * Knob LED color at startup.
  *   Options: [OFF: 0, WHITE: 1, RED: 2, ORANGE: 3, YELLOW: 4, GREEN: 5, BLUE: 6, INDIGO: 7, VIOLET: 8]
  */
-#define KNOB_LED_COLOR 1  // Default: 1
+#define KNOB_LED_COLOR 5  // Default: 1
 
 // Keep the LED state in Marlin Mode
 #define KEEP_KNOB_LED_COLOR_MARLIN_MODE  // Default: uncommented (enabled)
@@ -895,7 +895,7 @@
  * If enabled, when the LCD is idle (dimmed) then the knob LED will be also switched off.
  *   Options: [disable: 0, enable: 1]
  */
-#define KNOB_LED_IDLE 1  // Default: 1
+#define KNOB_LED_IDLE 0  // Default: 1
 
 /**
  * Knob LED Pixels (only for TFT28/TFT35_E3/TFT43/TFT50/TFT70 V3.0)
@@ -926,34 +926,34 @@
  */
 #define CUSTOM_LABEL_0 "Disable Steppers"
 #define CUSTOM_GCODE_0 "M84\n"
-#define CUSTOM_LABEL_1 "Init SD Card"
-#define CUSTOM_GCODE_1 "M21\n"
-#define CUSTOM_LABEL_2 "Release SD Card"
-#define CUSTOM_GCODE_2 "M22\n"
-#define CUSTOM_LABEL_3 "Enable Leveling State"
-#define CUSTOM_GCODE_3 "M420 S1\n"
-#define CUSTOM_LABEL_4 "Save to EEPROM"
-#define CUSTOM_GCODE_4 "M500\n"
-#define CUSTOM_LABEL_5 "Restore from EEPROM"
-#define CUSTOM_GCODE_5 "M501\n"
-#define CUSTOM_LABEL_6 "EEPROM Defaults"
-#define CUSTOM_GCODE_6 "M502\n"
-//#define CUSTOM_LABEL_7 "Custom7"
-//#define CUSTOM_GCODE_7 "M105\n"
-//#define CUSTOM_LABEL_8 "Custom8"
-//#define CUSTOM_GCODE_8 "M105\n"
-//#define CUSTOM_LABEL_9 "Custom9"
-//#define CUSTOM_GCODE_9 "M105\n"
-//#define CUSTOM_LABEL_10 "Custom10"
-//#define CUSTOM_GCODE_10 "M105\n"
-//#define CUSTOM_LABEL_11 "Custom11"
-//#define CUSTOM_GCODE_11 "M105\n"
-//#define CUSTOM_LABEL_12 "Custom12"
-//#define CUSTOM_GCODE_12 "M105\n"
-//#define CUSTOM_LABEL_13 "Custom13"
-//#define CUSTOM_GCODE_13 "M105\n"
-//#define CUSTOM_LABEL_14 "Custom14"
-//#define CUSTOM_GCODE_14 "M105\n"
+#define CUSTOM_LABEL_1 "Pin15_A15 S1"
+#define CUSTOM_GCODE_1 "M42 M1 P15 S1\n"
+#define CUSTOM_LABEL_2 "Pin15_A15 S0"
+#define CUSTOM_GCODE_2 "M42 M1 P15 S0\n"
+#define CUSTOM_LABEL_3 "Pin19_PB3 S1"
+#define CUSTOM_GCODE_3 "M42 M1 P19 S1\n"
+#define CUSTOM_LABEL_4 "Pin19_PB3 S0"
+#define CUSTOM_GCODE_4 "M42 M1 P19 S0\n"
+#define CUSTOM_LABEL_5 "Pin20_PB4 S1"
+#define CUSTOM_GCODE_5 "M42 M1 P20 S1\n"
+#define CUSTOM_LABEL_6 "Pin20_PB4 S0"
+#define CUSTOM_GCODE_6 "M42 M1 P20 S0\n"
+#define CUSTOM_LABEL_7 "Pin20_PB5 S1"
+#define CUSTOM_GCODE_7 "M42 M1 P21 S1\n"
+#define CUSTOM_LABEL_8 "Pin20_PB5 S0"
+#define CUSTOM_GCODE_8 "M42 M1 P21 S0\n"
+#define CUSTOM_LABEL_9 "Laser dimmed"
+#define CUSTOM_GCODE_9 "M106 P0 G1 S50"
+#define CUSTOM_LABEL_10 "Home XY"
+#define CUSTOM_GCODE_10 "G28 XY"
+#define CUSTOM_LABEL_11 "Home Z (0.2)"
+#define CUSTOM_GCODE_11 "G28 Z\nG0 Z0.2"
+#define CUSTOM_LABEL_12 "Save to EEPROM"
+#define CUSTOM_GCODE_12 "M500\n"
+#define CUSTOM_LABEL_13 "Restore from EEPROM"
+#define CUSTOM_GCODE_13 "M501\n"
+#define CUSTOM_LABEL_14 "EEPROM Defaults"
+#define CUSTOM_GCODE_14 "M502\n"
 
 //================================================================================
 //===================== Start, End & Cancel G-code Commands ======================
@@ -1080,8 +1080,8 @@
 #define SPEED_ID {"Sp.", "Fr."}  // (speed, flow rate)
 
 // Axes names displayed in Parameter Settings menu
-#define AXIS_DISPLAY_ID    {"X", "Y", "Z", "E0", "E1"}                    // (X, Y, Z, E0, E1)
-#define STEPPER_DISPLAY_ID {"X", "X2", "Y", "Y2", "Z", "Z2", "E0", "E1"}  // (X, X2, Y, Y2, Z, Z2, E0, E1)
+#define AXIS_DISPLAY_ID    {"X", "Y", "Z"}                    // (X, Y, Z, E0, E1)
+#define STEPPER_DISPLAY_ID {"X", "X2", "Y", "Y2", "Z"}  // (X, X2, Y, Y2, Z, Z2, E0, E1)
 
 // Manual Leveling
 // Move to four corner points to Leveling manually (Point 1, Point 2, Point 3, Point 4).
@@ -1097,12 +1097,12 @@
 
 // Probe Offset limits
 #define PROBE_Z_OFFSET_MIN_VALUE     -20.0f  // Default: -20.0f
-#define PROBE_Z_OFFSET_MAX_VALUE      20.0f  // Default: 20.0f
-#define PROBE_Z_OFFSET_DEFAULT_VALUE   0.0f  // Default: 0.0f
+#define PROBE_Z_OFFSET_MAX_VALUE      50.0f  // Default: 20.0f
+#define PROBE_Z_OFFSET_DEFAULT_VALUE   20.0f  // Default: 0.0f
 
 // Home Offset limits
 #define HOME_Z_OFFSET_MIN_VALUE     -20.0f  // Default: -20.0f
-#define HOME_Z_OFFSET_MAX_VALUE      20.0f  // Default: 20.0f
+#define HOME_Z_OFFSET_MAX_VALUE      50.0f  // Default: 20.0f
 #define HOME_Z_OFFSET_DEFAULT_VALUE   0.0f  // Default: 0.0f
 
 // Babystep limits
@@ -1130,7 +1130,7 @@
  *
  *   Options: [disable: 0, auto-detect: 1, ABL: 2, BBL: 3, UBL: 4, MBL: 5]
  */
-#define BED_LEVELING_TYPE 1  // Default: 1
+#define BED_LEVELING_TYPE 0  // Default: 1
 
 /**
  * MBL Settings
@@ -1227,7 +1227,7 @@
 #define BUZZER_STOP_LEVEL LOW  // Default: LOW
 
 // Show bootscreen when starting up
-#define SHOW_BTT_BOOTSCREEN  // Default: uncommented (enabled)
+//#define SHOW_BTT_BOOTSCREEN  // Default: uncommented (enabled)
 
 // Bootscreen logo time in ms
 #define BTT_BOOTSCREEN_TIME 3000  // Default: 3000
@@ -1295,7 +1295,7 @@
  *                    (Material Light if KEYBOARD_MATERIAL_THEME is enabled).
  *     High Contrast: Use white and black colors for high contrast.
  */
-#define KEYBOARD_COLOR_LAYOUT 0  // Default: 0
+#define KEYBOARD_COLOR_LAYOUT 2  // Default: 0
 
 /**
  * QWERTY/QWERTZ Keyboard Layout (Terminal menu)
@@ -1392,6 +1392,6 @@
  *                    require dedicated post-processing of gcode files for most slicers.
  *                    "RGB565 bitmap" and "Classic" are used as fallback.
  */
-#define THUMBNAIL_PARSER 0  // Default: 0
+#define THUMBNAIL_PARSER 0  // Default: 2
 
 #endif

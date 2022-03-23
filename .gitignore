@@ -120,3 +120,16 @@ cmake-build-*
 .pydevproject
 .settings
 .classpath
+Copy to SD Card root directory to update/config.ini
+Copy to SD Card root directory to update/THEME_Hybrid Mono Menu Material theme/TFT35/bmp/logo.bmp
+Copy to SD Card root directory to update/THEME_Hybrid Mono Menu Material theme/TFT35/bmp/touch_mode.bmp
+Copy to SD Card root directory to update/THEME_Hybrid Red Menu Material theme/TFT35/bmp/logo.bmp
+Copy to SD Card root directory to update/THEME_Hybrid Red Menu Material theme/TFT35/bmp/touch_mode.bmp
+Copy to SD Card root directory to update/THEME_Rep Rap Firmware Dark theme/TFT35/bmp/logo.bmp
+Copy to SD Card root directory to update/THEME_Rep Rap Firmware Dark theme/TFT35/bmp/touch_mode.bmp
+Copy to SD Card root directory to update/THEME_The Round Miracle Menu Material theme/TFT35/bmp/logo.bmp
+Copy to SD Card root directory to update/THEME_The Round Miracle Menu Material theme/TFT35/bmp/touch_mode.bmp
+Copy to SD Card root directory to update/THEME_Unified Menu Material theme/TFT35/bmp/logo.bmp
+platformio.ini
+TFT/src/User/config.ini
+TFT/src/User/Configuration.h
